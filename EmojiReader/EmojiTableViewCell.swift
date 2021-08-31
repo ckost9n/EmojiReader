@@ -20,8 +20,12 @@ class EmojiTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func set(object: Emoji) {
+        self.emojiLabel.text = object.emoji
+        self.nameLabel.text = object.name
+        self.descriptionLabel.text = object.description
     }
 
 }
